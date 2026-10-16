@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DailyTrack</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <div class="logo-icon">✓</div>
+                <span>DailyTrack</span>
+            </div>
+
+            <nav>
+                <a href="#" class="nav-item active">
+                    <span>▣</span>
+                    Dashboard
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span>✓</span>
+                    Routines
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span>▦</span>
+                    Calendar
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span>◔</span>
+                    Analytics
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span>◎</span>
+                    Goals
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="quote">
+                    <p>"Small steps every day."</p>
+                    <span>— Your future self</span>
+                </div>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main">
+
+            <!-- TOP BAR -->
+            <header class="topbar">
+
+                <div>
+                    <p class="date" id="currentDate"></p>
+                    <h1>Good evening 👋</h1>
+                </div>
+
+                <div class="profile">
+                    <div class="avatar">D</div>
+                    <div>
+                        <strong>David</strong>
+                        <small>Personal Dashboard</small>
+                    </div>
+                </div>
+
+            </header>
+
+
+            <!-- PROGRESS SECTION -->
+            <section class="progress-section">
+
+                <div class="progress-text">
+                    <div>
+                        <span>Today's Progress</span>
+                        <h2 id="progressPercentage">0%</h2>
+                    </div>
+
+                    <p id="progressMessage">
+                        Let's make today count.
+                    </p>
+                </div>
+
+                <div class="progress-bar">
+                    <div id="progressBar"></div>
+                </div>
+
+                <div class="progress-stats">
+                    <span id="completedCount">0 completed</span>
+                    <span id="totalCount">0 routines</span>
+                </div>
+
+            </section>
+
+
+            <!-- QUICK STATS -->
+            <section class="stats-grid">
+
+                <div class="stat-card">
+                    <span class="stat-icon">🔥</span>
+                    <div>
+                        <small>Current Streak</small>
+                        <strong>0 days</strong>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-icon">✓</span>
+                    <div>
+                        <small>Completed Today</small>
+                        <strong id="statCompleted">0</strong>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-icon">🎯</span>
+                    <div>
+                        <small>Weekly Goal</small>
+                        <strong>0%</strong>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- ROUTINES -->
+            <section class="routine-section">
+
+                <div class="section-header">
+
+                    <div>
+                        <h2>Today's Routines</h2>
+                        <p>Stay consistent. One task at a time.</p>
+                    </div>
+
+                    <button class="add-button" id="addRoutineBtn">
+                        + Add Routine
+                    </button>
+
+                </div>
+
+
+                <div class="routine-list" id="routineList">
+
+                    <!-- Routines will be inserted by JavaScript -->
+
+                </div>
+
+            </section>
+
+
+            <!-- MOTIVATION -->
+            <section class="motivation">
+
+                <div class="motivation-icon">🚀</div>
+
+                <div>
+                    <h3>Keep showing up.</h3>
+                    <p>
+                        You don't need a perfect day.
+                        You just need to keep moving forward.
+                    </p>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- ADD ROUTINE MODAL -->
+    <div class="modal-overlay" id="modal">
+
+        <div class="modal">
+
+            <button class="close-button" id="closeModal">
+                ×
+            </button>
+
+            <h2>Add a Routine</h2>
+
+            <p>Create something you want to accomplish today.</p>
+
+            <form id="routineForm">
+
+                <label>
+                    Routine name
+                    <input
+                        type="text"
+                        id="routineName"
+                        placeholder="e.g. Go to the gym"
+                        required
+                    >
+                </label>
+
+                <label>
+                    Time
+                    <input
+                        type="time"
+                        id="routineTime"
+                    >
+                </label>
+
+                <button type="submit" class="save-button">
+                    Add Routine
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
